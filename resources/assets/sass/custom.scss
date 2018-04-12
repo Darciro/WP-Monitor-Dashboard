@@ -1,0 +1,143 @@
+/****************** Custom ******************/
+html, body {
+	background: #323b44;
+	color: #98a6ad;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	height: 100vh;
+	margin: 0;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #777;
+	text-decoration: underline;
+}
+
+.min-col{
+	width: 35px !important;
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.flex-center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.position-ref {
+	position: relative;
+}
+
+.top-right {
+	position: absolute;
+	right: 10px;
+	top: 18px;
+}
+
+.content {
+	text-align: center;
+}
+
+.title {
+	font-size: 84px;
+}
+
+.links > a {
+	color: #636b6f;
+	padding: 0 25px;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: .1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.m-b-md {
+	margin-bottom: 30px;
+}
+
+.container-fluid {
+	max-width: 95%;
+}
+
+.card-box {
+	padding: 20px;
+	border: 1px solid rgba(54, 64, 74, 0.08);
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-clip: padding-box;
+	margin-bottom: 20px;
+	background-color: #36404a;
+}
+
+.text-muted,
+.table > tbody > tr > td{
+	color: #fff !important;
+}
+
+.text-red {
+	color: #f94242 !important;
+}
+
+.circliful {
+	position: relative;
+}
+
+.widget-simple-chart .circliful-chart {
+	float: left;
+	margin-top: -5px;
+}
+
+.circliful-chart {
+	margin: 0 auto;
+}
+
+/*
+table.table-fixed {
+	width: 100%;
+}
+
+table.table-fixed thead,
+table.table-fixed tbody,
+table.table-fixed tr,
+table.table-fixed td,
+table.table-fixed th { display: block; }
+
+table.table-fixed tr:after {
+	content: ' ';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+table.table-fixed tbody {
+	height: 450px;
+	overflow-y: auto;
+}
+
+table.table-fixed tbody td,
+table.table-fixed thead th {
+	width: 25%;
+	float: left;
+}
+
+table.table-fixed.table-fixed-cols-3 tbody td,
+table.table-fixed.table-fixed-cols-3 thead th {
+	width: 33.333%;
+}
+
+table.table-fixed.table-fixed-cols-5 tbody td,
+table.table-fixed.table-fixed-cols-5 thead th {
+	width: 20%;
+}
+
+*/

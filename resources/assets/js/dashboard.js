@@ -187,27 +187,41 @@ function drawSitePluginsTable( data ) {
     $('[data-toggle="tooltip"]').tooltip();
 }
 
-function getSiteUsers() {
-    // @TODO
-    drawSiteUsersChart();
+function getSiteUsers( jsonURL ) {
+    $.ajax({
+        url: jsonURL,
+        success: function ( data ) {
+            $('#total-users').text( data.total );
+            $.each(data, function (i, v) {
+                if( i === 'administrator' ) {
+                    $('#admin-users span').text(v);
+                }
+            });
+            drawSiteUsersChart( data );
+        }
+    });
 }
 
 
-function drawSiteUsersChart() {
+function drawSiteUsersChart( data ) {
+    delete data.total;
+    var labelsArr = [],
+        dataArr = [],
+        colorsArr = [];
+    $.each(data, function(key, index) {
+        labelsArr.push(key);
+        dataArr.push(index);
+        colorsArr.push( dynamicColors() );
+    });
+
     var ctx = document.getElementById("registered-users").getContext('2d'),
         myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: [
-                    'Assinante',
-                    'Colaborador',
-                    'Autor',
-                    'Editor',
-                    'Administrador'
-                ],
+                labels: labelsArr,
                 datasets: [{
-                    data: [67, 12, 12, 6, 3],
-                    backgroundColor: [dynamicColors(), dynamicColors(), dynamicColors(), dynamicColors(), dynamicColors(), dynamicColors()]
+                    data: dataArr,
+                    backgroundColor: colorsArr
                 }]
             },
             options: {
@@ -233,8 +247,8 @@ function drawSiteUsersChart() {
                             labelString: 'probability'
                         },
                         ticks: {
-                            min: 1,
-                            beginAtZero: true,
+                            min: 0,
+                            beginAtZero: true
                         }
                     }]
                 }

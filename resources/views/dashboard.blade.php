@@ -49,9 +49,9 @@
                         <div class="circliful-chart circliful">
                             <canvas id="registered-users" width="150" height="125"></canvas>
                         </div>
-                        <h3 class="counter m-t-10" id="installed-plugins">123</h3>
+                        <h3 class="counter m-t-10" id="total-users">0</h3>
                         <h4 class="header-title m-t-0">Usuários cadastrados</h4>
-                        <small id="admin-users" class="text-red"><b><span>12</span></b> Administradores</small>
+                        <small id="admin-users" class="text-red"><b><span>0</span></b> Administradores</small>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
                 createTableData("{{ $server_info_api_url }}", '#card-server-info table');
                 getSiteThemes("{{ $site_themes_api_url  }}");
                 getSitePlugins("{{ $site_plugins_api_url  }}");
-                getSiteUsers();
+                getSiteUsers("{{ $site_users_api_url  }}");
             });
         })(jQuery);
     </script>

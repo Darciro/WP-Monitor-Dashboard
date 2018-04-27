@@ -119,10 +119,12 @@
 @endsection
 
 @push('scripts')
-    <script src="{{ url('/js/dashboard.js')  }}"></script>
     <script>
+        var WPMonitorAPIKey;
+
         (function ($) {
             $(document).ready(function () {
+                WPMonitorAPIKey = {{ $wp_monitor_api_key }};
                 initHelpers();
                 getSiteData("{{ $site_info_api_url }}");
                 createTableData("{{ $server_info_api_url }}", '#card-server-info table');

@@ -7,6 +7,14 @@ function initHelpers() {
 function getSiteData( jsonURL ) {
     $.ajax({
         url: jsonURL,
+        xhrFields: {
+            withCredentials: true
+        },
+        beforeSend: function ( xhr ) {
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa('wp-monitor-api:' + WPMonitorAPIKey));
+        },
+        cache: false,
+        dataType: 'json',
         success: function ( data ) {
             $('#site-name').text( data['site-name'] );
             $('#site-url').attr( 'href', data['site-url'] ).text( data['site-url'] );
@@ -25,9 +33,15 @@ function getSiteData( jsonURL ) {
 function createTableData( jsonURL, target ) {
     $.ajax({
         url: jsonURL,
-        beforeSend: function () {
+        xhrFields: {
+            withCredentials: true
+        },
+        beforeSend: function ( xhr ) {
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa('wp-monitor-api:' + WPMonitorAPIKey));
             $(target).append('<tr class="loading-data"><td colspan="2">Carregando</td></tr>');
         },
+        cache: false,
+        dataType: 'json',
         success: function ( data ) {
             $.each(data, function (i, v) {
                 $('.loading-data').remove();
@@ -54,6 +68,14 @@ function dynamicColors() {
 function getSiteThemes( jsonURL ) {
     $.ajax({
         url: jsonURL,
+        xhrFields: {
+            withCredentials: true
+        },
+        beforeSend: function ( xhr ) {
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa('wp-monitor-api:' + WPMonitorAPIKey));
+        },
+        cache: false,
+        dataType: 'json',
         success: function ( data ) {
             $('#installed-themes').text( Object.keys(data).length );
 
@@ -122,6 +144,14 @@ function drawSiteThemesTable( data ) {
 function getSitePlugins( jsonURL ) {
     $.ajax({
         url: jsonURL,
+        xhrFields: {
+            withCredentials: true
+        },
+        beforeSend: function ( xhr ) {
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa('wp-monitor-api:' + WPMonitorAPIKey));
+        },
+        cache: false,
+        dataType: 'json',
         success: function ( data ) {
             $('#installed-plugins').text( Object.keys(data).length );
 
@@ -190,6 +220,14 @@ function drawSitePluginsTable( data ) {
 function getSiteUsers( jsonURL ) {
     $.ajax({
         url: jsonURL,
+        xhrFields: {
+            withCredentials: true
+        },
+        beforeSend: function ( xhr ) {
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa('wp-monitor-api:' + WPMonitorAPIKey));
+        },
+        cache: false,
+        dataType: 'json',
         success: function ( data ) {
             $('#total-users').text( data.total );
             $.each(data, function (i, v) {

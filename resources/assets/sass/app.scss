@@ -1,13 +1,66 @@
-
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+// @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+// @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 // Variables
-@import "variables";
+// @import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+/*!
+
+ =========================================================
+ * Material Dashboard - v1.2.0
+ =========================================================
+
+ * Product Page: http://www.creative-tim.com/product/material-dashboard
+ * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+
+//variables and mixins
+@import "material-dashboard-core/variables";
+@import "material-dashboard-core/mixins";
+@import "material-dashboard-core/shadows";
+
+//plugin css
+@import "material-dashboard-core/plugins/_plugin-nouislider";
+@import "material-dashboard-core/plugins/_animate";
+@import "material-dashboard-core/plugins/_perfect-scrollbar";
+
+// Core CSS
+@import "material-dashboard-core/typography";
+@import "material-dashboard-core/sidebar-and-main-panel";
+@import "material-dashboard-core/buttons";
+@import "material-dashboard-core/misc";
+@import "material-dashboard-core/inputs";
+@import "material-dashboard-core/forms";
+@import "material-dashboard-core/alerts";
+@import "material-dashboard-core/tables";
+@import "material-dashboard-core/checkboxes";
+@import "material-dashboard-core/radios";
+@import "material-dashboard-core/togglebutton";
+@import "material-dashboard-core/ripples";
+@import "material-dashboard-core/pagination";
+@import "material-dashboard-core/pills";
+@import "material-dashboard-core/dialogs";
+@import "material-dashboard-core/navbars";
+@import "material-dashboard-core/popups";
+@import "material-dashboard-core/footers";
+
+// Fancy Stuff
+@import "material-dashboard-core/dropdown";
+@import "material-dashboard-core/cards";
+@import "material-dashboard-core/tabs";
+@import "material-dashboard-core/chartist";
+@import "material-dashboard-core/responsive";
 
 // Custom
 @import "custom";

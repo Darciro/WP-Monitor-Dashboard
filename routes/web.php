@@ -11,12 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home');
+});*/
+
+Route::get('/', 'DashboardController@index');
+
+Route::get('/sites/{id}/delete', 'SitesController@delete');
+Route::resource('/sites', 'SitesController');
+
+Route::get('/about', function () {
+    $title = 'Sobre';
+    return view('about', compact('title') );
 });
-
-/* Route::get('/dashboard', function () {
-	return view('dashboard');
-}); */
-
-Route::get('/dashboard', 'DashboardController@index');

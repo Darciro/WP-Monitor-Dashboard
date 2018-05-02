@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header" data-background-color="purple">
+                        <div class="card-header" data-background-color="{{ $dashboard_main_color }}">
                             <h4 class="title">Todos os sites</h4>
                             <p class="category">Lista de todos os sites cadastrados pelo sistema.</p>
                         </div>

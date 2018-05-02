@@ -22,5 +22,6 @@ Route::resource('/sites', 'SitesController');
 
 Route::get('/about', function () {
     $title = 'Sobre';
-    return view('about', compact('title') );
+    $dashboard_main_color = 'green';
+    return view('about', compact('title', 'dashboard_main_color') );
 });

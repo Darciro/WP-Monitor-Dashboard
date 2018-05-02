@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header" data-background-color="purple">
+                        <div class="card-header" data-background-color="{{ $dashboard_main_color }}">
                             <h4 class="title">Sobre</h4>
                             <p class="category">@TODO</p>
                         </div>

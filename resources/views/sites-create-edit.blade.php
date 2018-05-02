@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header" data-background-color="purple">
+                        <div class="card-header" data-background-color="{{ $dashboard_main_color }}">
                             <h4 class="title">@if( !isset( $site ) ) Novo site @else Editar site @endif</h4>
                             <p class="category">@if( !isset( $site ) ) Adicione as informações do site e em seguida clique no botão <b>"Monitorar"</b> @else Atualize as informações do site e em seguida clique no botão <b>"Atualizar"</b> @endif</p>
                         </div>

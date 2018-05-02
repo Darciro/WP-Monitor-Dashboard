@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="purple">
+<div class="sidebar" data-color="{{ $dashboard_main_color or 'purple' }}">
     <div class="logo">
         <a href="{{ url('/') }}" class="simple-text">Monitor WordPress</a>
     </div>
@@ -22,7 +22,7 @@
                     <p>Novo site</p>
                 </a>
             </li>
-            <li @if( Request::url() === url('/info') ) class="active" @endif>
+            <li @if( Request::url() === url('/about') ) class="active" @endif>
                 <a href="{{ url('/about') }}">
                     <i class="material-icons">info_outline</i>
                     <p>Sobre</p>

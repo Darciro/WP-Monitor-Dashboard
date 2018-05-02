@@ -9,20 +9,25 @@ class SitesController extends Controller
 {
 
     private $sites;
+    private $dashboard_main_color;
 
     public function __construct(Site $sites) {
         $this->sites = $sites;
+        $this->dashboard_main_color = 'purple';
     }
 
     public function index () {
         $sites = $this->sites->all();
+        $dashboard_main_color = 'blue';
         $title = 'Sites monitorados';
-        return view('sites', compact('title','sites' ));
+        return view('sites', compact('title', 'dashboard_main_color','sites' ));
     }
 
 	public function create () {
+        $this->dashboard_main_color = '';
+        $dashboard_main_color = 'blue';
         $title = 'Monitorar novo site';
-        return view('sites-create-edit', compact('title' ));
+        return view('sites-create-edit', compact('title', 'dashboard_main_color' ));
 	}
 
 	public function store (Request $request) {
@@ -42,6 +47,7 @@ class SitesController extends Controller
 	public function show ($id) {
         $site = $this->sites->find( $id );
         $title = 'Monitor: ' . $site->name;
+        $dashboard_main_color = 'blue';
         $wp_monitor_api_key = $site['security-token'];
         $server_info_api_url = $site->url . '/wp-json/wp-monitor-api/v1/server/info';
         $site_info_api_url = $site->url . '/wp-json/wp-monitor-api/v1/site/info';
@@ -49,19 +55,19 @@ class SitesController extends Controller
         $site_plugins_api_url = $site->url . '/wp-json/wp-monitor-api/v1/site/plugins';
         $site_users_api_url = $site->url . '/wp-json/wp-monitor-api/v1/site/users';
 
-        return view('sites-view', compact('site', 'wp_monitor_api_key', 'title', 'server_info_api_url', 'site_info_api_url', 'site_themes_api_url', 'site_plugins_api_url', 'site_users_api_url' ));
+        return view('sites-view', compact('site', 'dashboard_main_color', 'wp_monitor_api_key', 'title', 'server_info_api_url', 'site_info_api_url', 'site_themes_api_url', 'site_plugins_api_url', 'site_users_api_url' ));
 	}
 
 	public function edit ($id) {
         $site = $this->sites->find( $id );
         $title = 'Editar site: ' . $site->name;
-        return view('sites-create-edit', compact('title', 'site' ));
+        $dashboard_main_color = 'blue';
+        return view('sites-create-edit', compact('title', 'dashboard_main_color', 'site' ));
 	}
 
 	public function update (Request $request, $id) {
         $form_data = $request->all();
         $site = $this->sites->find( $id );
-
         $form_data['active'] = ( isset( $form_data['active'] ) ) ? 1 : 0;
         $form_data['security-token'] = trim( $form_data['security-token'] );
 
@@ -78,8 +84,8 @@ class SitesController extends Controller
     public function delete ($id) {
         $site = $this->sites->find( $id );
         $title = 'Deletar site: ' . $site->name;
-
-        return view('sites-delete', compact('title', 'site'));
+        $dashboard_main_color = 'blue';
+        return view('sites-delete', compact('title', 'dashboard_main_color', 'site'));
     }
 
 	public function destroy ($id) {

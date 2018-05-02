@@ -7,7 +7,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="orange">
-                            <i class="material-icons">content_copy</i>
+                            <i class="material-icons">assignment</i>
                         </div>
                         <div class="card-content">
                             <p class="category">Sites monitorados</p>
@@ -15,7 +15,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="stats">
-                                <i class="material-icons">warning</i>
+                                <i class="material-icons">add_to_queue</i>
                                 <a href="{{ route('sites.create') }}">Adicionar novo site</a>
                             </div>
                         </div>
@@ -24,7 +24,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="green">
-                            <i class="material-icons">store</i>
+                            <i class="material-icons">supervisor_account</i>
                         </div>
                         <div class="card-content">
                             <p class="category">Usuários do sistema</p>
@@ -74,33 +74,18 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-header card-chart" data-background-color="green">
-                            <div class="ct-chart" id="dailySalesChart"></div>
-                        </div>
-                        <div class="card-content">
-                            <h4 class="title">Daily Sales</h4>
-                            <p class="category">
-                                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons">access_time</i> updated 4 minutes ago
+                        <div class="card-header card-chart" data-background-color="red">
+                            <div style="padding: 25px 50px">
+                                <canvas class="ct-chart" id="criticity-chart"></canvas>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header card-chart" data-background-color="orange">
-                            <div class="ct-chart" id="emailsSubscriptionChart"></div>
-                        </div>
                         <div class="card-content">
-                            <h4 class="title">Email Subscriptions</h4>
-                            <p class="category">Last Campaign Performance</p>
+                            <h4 class="title">Site Críticaço</h4>
+                            <p class="category">Lorem ipsum dolor sit amet</p>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
-                                <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                <i class="material-icons">warning</i> Aqui vem algum aviso importante
                             </div>
                         </div>
                     </div>
@@ -108,15 +93,89 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-header card-chart" data-background-color="red">
-                            <div class="ct-chart" id="completedTasksChart"></div>
+                            <div style="padding: 25px 50px">
+                                <canvas class="ct-chart" id="criticity-chart-2"></canvas>
+                            </div>
                         </div>
                         <div class="card-content">
-                            <h4 class="title">Completed Tasks</h4>
-                            <p class="category">Last Campaign Performance</p>
+                            <h4 class="title">Site 2, menos crítico</h4>
+                            <p class="category">Lorem ipsum dolor sit amet</p>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
-                                <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                <i class="material-icons">access_time</i> Quem sabe alguma sugestão
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header card-chart" data-background-color="orange">
+                            <div style="padding: 25px 50px">
+                                <canvas class="ct-chart" id="criticity-chart-3"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="title">Site Moderadus</h4>
+                            <p class="category">increase in today sales.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">access_time</i> Relaxa que aqui tá tudo certo!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header card-chart" data-background-color="orange">
+                            <div style="padding: 25px 50px">
+                                <canvas class="ct-chart" id="criticity-chart-4"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="title">Site marromeno</h4>
+                            <p class="category">Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">warning</i> Aqui vem algum aviso importante
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header card-chart" data-background-color="green">
+                            <div style="padding: 25px 50px">
+                                <canvas class="ct-chart" id="criticity-chart-5"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="title">Site Tranquilus</h4>
+                            <p class="category">Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">access_time</i> Quem sabe alguma sugestão
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header card-chart" data-background-color="green">
+                            <div style="padding: 25px 50px">
+                                <canvas class="ct-chart" id="criticity-chart-6"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="title">Site De bobs</h4>
+                            <p class="category">increase in today sales.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">access_time</i> Relaxa que aqui tá tudo certo!
                             </div>
                         </div>
                     </div>
@@ -454,7 +513,6 @@
 @endsection
 
 @push('scripts')
-    <script src="{{ url('/js/dashboard.js')  }}"></script>
     <script>
         (function ($) {
             $(document).ready(function () {
@@ -540,7 +598,7 @@
 
                         /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
 
-                        dataCompletedTasksChart = {
+                        /*dataCompletedTasksChart = {
                             labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
                             series: [
                                 [230, 750, 450, 300, 280, 240, 200, 190]
@@ -561,10 +619,10 @@
                             }
                         }
 
-                        var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
+                        var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);*/
 
                         // start animation for the Completed Tasks Chart - Line Chart
-                        md.startAnimationForLineChart(completedTasksChart);
+                        // md.startAnimationForLineChart(completedTasksChart);
 
 
                         /* ----------==========     Emails Subscription Chart initialization    ==========---------- */
@@ -732,6 +790,144 @@
                 }
 
                 demo.initDashboardPageCharts();
+
+                var ctx = document.getElementById('criticity-chart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'Score negativo',
+                            'Total'
+                        ],
+                        datasets: [{
+                            data: [75, 35],
+                            backgroundColor: ['#981309', '#fff']
+                        }]
+                    },
+                    options: {
+                        rotation: -1.0 * Math.PI, // start angle in radians
+                        circumference: Math.PI, // sweep angle in radians
+                        responsive: true,
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('criticity-chart-2').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'Score negativo',
+                            'Total'
+                        ],
+                        datasets: [{
+                            data: [62, 35],
+                            backgroundColor: ['#981309', '#fff']
+                        }]
+                    },
+                    options: {
+                        rotation: -1.0 * Math.PI, // start angle in radians
+                        circumference: Math.PI, // sweep angle in radians
+                        responsive: true,
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('criticity-chart-3').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'Score negativo',
+                            'Total'
+                        ],
+                        datasets: [{
+                            data: [50, 100],
+                            backgroundColor: ['#a95d00', '#fff']
+                        }]
+                    },
+                    options: {
+                        rotation: -1.0 * Math.PI, // start angle in radians
+                        circumference: Math.PI, // sweep angle in radians
+                        responsive: true,
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('criticity-chart-4').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'Score negativo',
+                            'Total'
+                        ],
+                        datasets: [{
+                            data: [45, 100],
+                            backgroundColor: ['#a95d00', '#fff']
+                        }]
+                    },
+                    options: {
+                        rotation: -1.0 * Math.PI, // start angle in radians
+                        circumference: Math.PI, // sweep angle in radians
+                        responsive: true,
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('criticity-chart-5').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'Score negativo',
+                            'Total'
+                        ],
+                        datasets: [{
+                            data: [12, 100],
+                            backgroundColor: ['#044604', '#fff']
+                        }]
+                    },
+                    options: {
+                        rotation: -1.0 * Math.PI, // start angle in radians
+                        circumference: Math.PI, // sweep angle in radians
+                        responsive: true,
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('criticity-chart-6').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'Score negativo',
+                            'Total'
+                        ],
+                        datasets: [{
+                            data: [3, 100],
+                            backgroundColor: ['#044604', '#fff']
+                        }]
+                    },
+                    options: {
+                        rotation: -1.0 * Math.PI, // start angle in radians
+                        circumference: Math.PI, // sweep angle in radians
+                        responsive: true,
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
             });
         })(jQuery);
     </script>

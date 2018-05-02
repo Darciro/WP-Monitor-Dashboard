@@ -31,24 +31,24 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">Mike John responded to your email</a>
+                            <a href="#">Exemplo de aviso importante</a>
                         </li>
                         <li>
-                            <a href="#">You have 5 new tasks</a>
+                            <a href="#">Mais um aviso</a>
                         </li>
                         <li>
-                            <a href="#">You're now friend with Andrew</a>
+                            <a href="#">Mensagem importante sobre o monitoramento</a>
                         </li>
                         <li>
-                            <a href="#">Another Notification</a>
+                            <a href="#">Outra mensagem</a>
                         </li>
                         <li>
-                            <a href="#">Another One</a>
+                            <a href="#">Mais uma</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="material-icons">person</i>
                         <p class="hidden-lg hidden-md">Profile</p>
                     </a>

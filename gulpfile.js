@@ -24,6 +24,7 @@ elixir((mix) => {
     ], 'public/js/dashboard.js');*/
 
     mix.scripts([
+        'app.js',
         'material.min.js',
         'chartist.min.js',
         'arrive.min.js',

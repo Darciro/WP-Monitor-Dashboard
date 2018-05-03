@@ -29,7 +29,8 @@
     </div>
 
     <script src="{{ url('/js/app.js')  }}"></script>
-    <script src="{{ url('/js/dashboard.js')  }}"></script>
+    <script src="{{ url('/js/all.js')  }}"></script>
+    {{--<script src="{{ url('/js/dashboard.js')  }}"></script>--}}
     @stack('scripts')
 </body>
 </html>

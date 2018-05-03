@@ -58,13 +58,3 @@
         </div>
     </div>
 @endsection
-
-@push('scripts')
-    <script>
-        (function ($) {
-            $(document).ready(function () {
-                initHelpers();
-            });
-        })(jQuery);
-    </script>
-@endpush

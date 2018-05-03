@@ -13,18 +13,13 @@ require('laravel-elixir-livereload');
  | file for your application as well as publishing vendor resources.
  |
  */
-
-elixir((mix) => {
-    mix.sass('app.scss')
-       .webpack('app.js');
-
-    /*mix.scripts([
-        'Chart.js',
-        'dashboard.js',
-    ], 'public/js/dashboard.js');*/
+elixir(function(mix) {
+    mix.sass('app.scss');
+    mix.webpack('app.js');
+    // mix.scriptsIn('resources/assets/js');
+    // mix.scriptsIn('public/js');
 
     mix.scripts([
-        'app.js',
         'material.min.js',
         'chartist.min.js',
         'arrive.min.js',
@@ -32,13 +27,10 @@ elixir((mix) => {
         'bootstrap-notify.js',
         'material-dashboard.js',
         'Chart.js',
-        'dashboard.js',
-    ], 'public/js/app.js');
+        'dashboard.js'
+    ]);
 
-    mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/fonts/bootstrap');
+    mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/fonts/bootstrap/');
 
-});
-
-elixir(function(mix) {
     mix.livereload();
 });

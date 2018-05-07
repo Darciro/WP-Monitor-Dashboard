@@ -10,6 +10,7 @@ class DashboardController extends Controller
     private $sites;
 
     public function __construct(Site $sites) {
+        $this->middleware('auth');
         $this->sites = $sites;
     }
 

@@ -493,12 +493,10 @@
                 @endif
             </div>
         @endif
-
         <div class="content">
             <div class="title m-b-md">
                 Laravel App
             </div>
-
             <div class="links">
                 <a href="{{ url('/dashboard') }}">Dashboard</a>
                 <a href="{{ url('/sites') }}">Sites</a>
@@ -517,10 +515,7 @@
         (function ($) {
             $(document).ready(function () {
                 console.log('Foobar');
-
                 type = ['', 'info', 'success', 'warning', 'danger'];
-
-
                 demo = {
                     initPickColor: function() {
                         $('.pick-class-label').click(function() {
@@ -535,17 +530,14 @@
                             }
                         });
                     },
-
                     initDocumentationCharts: function() {
                         /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
-
                         dataDailySalesChart = {
                             labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
                             series: [
                                 [12, 17, 7, 17, 23, 18, 38]
                             ]
                         };
-
                         optionsDailySalesChart = {
                             lineSmooth: Chartist.Interpolation.cardinal({
                                 tension: 0
@@ -559,23 +551,17 @@
                                 left: 0
                             },
                         }
-
                         var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
-
                         md.startAnimationForLineChart(dailySalesChart);
                     },
-
                     initDashboardPageCharts: function() {
-
                         /* ----------==========     Daily Sales Chart initialization    ==========---------- */
-
                         dataDailySalesChart = {
                             labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
                             series: [
                                 [12, 17, 7, 17, 23, 18, 38]
                             ]
                         };
-
                         optionsDailySalesChart = {
                             lineSmooth: Chartist.Interpolation.cardinal({
                                 tension: 0
@@ -589,22 +575,15 @@
                                 left: 0
                             },
                         }
-
                         var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
-
                         md.startAnimationForLineChart(dailySalesChart);
-
-
-
                         /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
-
                         /*dataCompletedTasksChart = {
                             labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
                             series: [
                                 [230, 750, 450, 300, 280, 240, 200, 190]
                             ]
                         };
-
                         optionsCompletedTasksChart = {
                             lineSmooth: Chartist.Interpolation.cardinal({
                                 tension: 0
@@ -618,20 +597,14 @@
                                 left: 0
                             }
                         }
-
                         var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);*/
-
                         // start animation for the Completed Tasks Chart - Line Chart
                         // md.startAnimationForLineChart(completedTasksChart);
-
-
                         /* ----------==========     Emails Subscription Chart initialization    ==========---------- */
-
                         var dataEmailsSubscriptionChart = {
                             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                             series: [
                                 [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
-
                             ]
                         };
                         var optionsEmailsSubscriptionChart = {
@@ -658,12 +631,9 @@
                             }]
                         ];
                         var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChart', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
-
                         //start animation for the Emails Subscription Chart
                         md.startAnimationForBarChart(emailsSubscriptionChart);
-
                     },
-
                     initGoogleMaps: function() {
                         var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
                         var mapOptions = {
@@ -755,26 +725,20 @@
                                     "visibility": "simplified"
                                 }]
                             }]
-
                         }
                         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
                         var marker = new google.maps.Marker({
                             position: myLatlng,
                             title: "Hello World!"
                         });
-
                         // To add the marker to the map, call setMap();
                         marker.setMap(map);
                     },
-
                     showNotification: function(from, align) {
                         color = Math.floor((Math.random() * 4) + 1);
-
                         $.notify({
                             icon: "notifications",
                             message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
-
                         }, {
                             type: type[color],
                             timer: 4000,
@@ -784,13 +748,8 @@
                             }
                         });
                     }
-
-
-
                 }
-
                 demo.initDashboardPageCharts();
-
                 var ctx = document.getElementById('criticity-chart').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'doughnut',
@@ -813,7 +772,6 @@
                         }
                     }
                 });
-
                 var ctx = document.getElementById('criticity-chart-2').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'doughnut',
@@ -836,7 +794,6 @@
                         }
                     }
                 });
-
                 var ctx = document.getElementById('criticity-chart-3').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'doughnut',
@@ -859,7 +816,6 @@
                         }
                     }
                 });
-
                 var ctx = document.getElementById('criticity-chart-4').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'doughnut',
@@ -882,7 +838,6 @@
                         }
                     }
                 });
-
                 var ctx = document.getElementById('criticity-chart-5').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'doughnut',
@@ -905,7 +860,6 @@
                         }
                     }
                 });
-
                 var ctx = document.getElementById('criticity-chart-6').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'doughnut',

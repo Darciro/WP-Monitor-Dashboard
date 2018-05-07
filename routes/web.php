@@ -11,10 +11,6 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('home');
-});*/
-
 Route::get('/', 'DashboardController@index');
 
 Route::get('/sites/{id}/delete', 'SitesController@delete');
@@ -24,4 +20,17 @@ Route::get('/about', function () {
     $title = 'Sobre';
     $dashboard_main_color = 'green';
     return view('about', compact('title', 'dashboard_main_color') );
+});
+
+/*Route::get('/', function () {
+    return view('home');
+});*/
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index');
+
+Route::get('/logout', function () {
+    Auth::logout();
+
+    return redirect('/');
 });

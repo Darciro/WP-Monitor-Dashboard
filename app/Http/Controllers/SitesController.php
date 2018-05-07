@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Site;
 
 class SitesController extends Controller
 {
 
+    private $user;
     private $sites;
     private $dashboard_main_color;
 
     public function __construct(Site $sites) {
+        $this->middleware('auth');
+        $this->user = Auth::user();
         $this->sites = $sites;
         $this->dashboard_main_color = 'purple';
     }

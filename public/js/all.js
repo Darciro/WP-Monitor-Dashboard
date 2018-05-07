@@ -15146,6 +15146,8 @@ var apiURL;
 
                 $('#loading-monitor').addClass('hidden');
                 $('#loading-monitor-error').removeClass('hidden');
+
+                return;
             })
         },
 

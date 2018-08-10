@@ -83,15 +83,22 @@ var apiURL;
          */
         getDataPromise: function ( apiURL ) {
             return $.ajax({
+                method: 'GET',
                 url: apiURL,
                 xhrFields: {
                     withCredentials: true
                 },
                 beforeSend: function ( xhr ) {
+                    xhr.setRequestHeader('X-Requested-With',  'XMLHttpRequest');
                     xhr.setRequestHeader('Authorization', 'Basic ' + btoa('wp-monitor-api:' + WPMonitorAPIKey));
                 },
                 cache: true,
-                dataType: 'json'
+                crossDomain: true,
+                encode : true,
+                async: false,
+                dataType: 'JSON',
+                contentType: 'application/json; charset=UTF-8',
+                processData: false
             });
         },
 
